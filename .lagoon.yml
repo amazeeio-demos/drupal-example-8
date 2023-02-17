@@ -11,9 +11,9 @@ tasks:
 
   post-rollout:
     - run:
-      name: drush cim
-      command: echo "äöü"
-      service: cli
+        name: drush cim
+        command: echo "äöü"
+        service: cli
     - run:
         name: IF no Drupal installed and we are not main branch, sync from main brancy
         command: |
