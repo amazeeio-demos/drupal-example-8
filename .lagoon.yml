@@ -11,6 +11,10 @@ tasks:
 
   post-rollout:
     - run:
+      name: drush cim
+      command: echo "äöü"
+      service: cli
+    - run:
         name: IF no Drupal installed and we are not main branch, sync from main brancy
         command: |
           if tables=$(drush sqlq 'show tables;') && [ -z "$tables" ] && [[ "$LAGOON_GIT_BRANCH" != "main" ]]; then
